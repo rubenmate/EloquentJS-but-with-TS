@@ -4,3 +4,10 @@
 -   You can test this with `npm test`
 -   If you want, delete the implementation and try to do it yourself (In the future I may add an empty branch with just the tests)
 -   If you like the book I can't recommend it enough. Support the author purchasing it!
+
+## Instructions
+
+-   Clone the repo `git clone git@github.com:rubenmate/EloquentJS-but-with-TS.git`
+-   `cd EloquentJS-but-with-TS`
+-   `npm install`
+-   You can now run the tests `npm test`
