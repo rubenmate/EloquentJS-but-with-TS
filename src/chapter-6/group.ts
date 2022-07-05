@@ -1,4 +1,6 @@
 // -- Groups --
+// This implementation and the next exercise are not exactly the same since one will accept numbers
+// and the other String values
 // For instructions refer to https://eloquentjavascript.net/06_object.html and go to Exercises (end
 // of chapter)
 export default class Group {
@@ -7,22 +9,22 @@ export default class Group {
         this.values = [];
     }
 
-    add(number: number): void {
-        if (!this.has(number)) {
-            this.values.push(number);
+    add(value: number): void {
+        if (!this.has(value)) {
+            this.values.push(value);
         }
     }
 
-    delete(number: number): void {
-        if (this.has(number)) {
-            let index = this.values.indexOf(number);
+    delete(value: number): void {
+        if (this.has(value)) {
+            let index = this.values.indexOf(value);
             this.values.splice(index, 1);
         }
         // TODO: Do it with filter
     }
 
-    has(number: number): boolean {
-        return this.values.indexOf(number) === -1 ? false : true;
+    has(value: number): boolean {
+        return this.values.indexOf(value) === -1 ? false : true;
     }
 
     static from(range: number[]): Group {
@@ -78,11 +80,11 @@ if (import.meta.vitest) {
         });
 
         it("from takes an iterable object and creates a group containing all the values", () => {
-            let range: number[] = [10, 20];
-            let group = Group.from(range);
-            for (const element in range) {
-                if (range.hasOwnProperty(element)) {
-                    const number = range[element];
+            let values: number[] = [10, 20];
+            let group = Group.from(values);
+            for (const element in values) {
+                if (values.hasOwnProperty(element)) {
+                    const number = values[element];
                     expect(group.values).toContain(number);
                 }
             }
