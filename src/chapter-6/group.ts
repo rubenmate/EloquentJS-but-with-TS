@@ -42,7 +42,7 @@ export default class Group {
 if (import.meta.vitest) {
     const { describe, expect, it, beforeEach } = import.meta.vitest;
 
-    describe("class Group", () => {
+    describe("Class Group", () => {
         let group: Group;
         beforeEach(() => {
             group = new Group();
