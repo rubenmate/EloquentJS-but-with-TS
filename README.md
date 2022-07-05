@@ -7,7 +7,7 @@
 
 ## Instructions
 
--   Clone the repo `git clone git@github.com:rubenmate/EloquentJS-but-with-TS.git`
+-   Clone the repo `git clone https://github.com/rubenmate/EloquentJS-but-with-TS.git`
 -   `cd EloquentJS-but-with-TS`
 -   `npm install`
 -   You can now run the tests `npm test`
