@@ -12,7 +12,7 @@ let call = Object.prototype.hasOwnProperty.call(map, "one");
 if (import.meta.vitest) {
     const { describe, expect, it } = import.meta.vitest;
 
-    describe("class Vec", () => {
+    describe("Borrowing a method", () => {
         it("map should have 'one' property", () => {
             expect(call).toBe(true);
         });

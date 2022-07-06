@@ -1,33 +1,33 @@
 // -- Groups --
 // This implementation and the previous exercise are not exactly the same since one will accept
-// numbers and the other String values
+// numbers and the other string values
 // For instructions refer to https://eloquentjavascript.net/06_object.html and go to Exercises (end
 // of chapter)
 
 export default class Group {
-    values: String[];
+    values: string[];
     constructor() {
         this.values = [];
     }
 
-    add(value: String): void {
+    add(value: string): void {
         if (!this.has(value)) {
             this.values.push(value);
         }
     }
 
-    delete(value: String): void {
+    delete(value: string): void {
         if (this.has(value)) {
             let index = this.values.indexOf(value);
             this.values.splice(index, 1);
         }
     }
 
-    has(value: String): boolean {
+    has(value: string): boolean {
         return this.values.indexOf(value) === -1 ? false : true;
     }
 
-    static from(range: String[]): Group {
+    static from(range: string[]): Group {
         let group = new Group();
         for (const element in range) {
             if (range.hasOwnProperty(element)) {
@@ -50,7 +50,7 @@ class GroupIterator {
         this.position = 0;
     }
 
-    next(): { value?: String; done: boolean } {
+    next(): { value?: string; done: boolean } {
         if (this.position === this.group.values.length) {
             return { done: true };
         }
@@ -101,7 +101,7 @@ if (import.meta.vitest) {
         });
 
         it("from takes an iterable object and creates a group containing all the values", () => {
-            let values: String[] = ["a", "b", "c"];
+            let values: string[] = ["a", "b", "c"];
             let group = Group.from(values);
             for (const element in values) {
                 if (values.hasOwnProperty(element)) {
