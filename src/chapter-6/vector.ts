@@ -1,6 +1,7 @@
 // -- A vector type --
 // For instructions refer to https://eloquentjavascript.net/06_object.html and go to Exercises (end
 // of chapter)
+
 export default class Vec {
     x: number;
     y: number;

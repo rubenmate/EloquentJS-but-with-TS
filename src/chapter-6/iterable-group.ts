@@ -3,6 +3,7 @@
 // numbers and the other String values
 // For instructions refer to https://eloquentjavascript.net/06_object.html and go to Exercises (end
 // of chapter)
+
 export default class Group {
     values: String[];
     constructor() {
