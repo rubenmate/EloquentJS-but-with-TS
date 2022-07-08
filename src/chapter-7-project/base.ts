@@ -155,3 +155,4 @@ function goalOrientedRobot({ place, parcels }: VillageState, route: string[]) {
 }
 
 export { VillageState, runRobot, randomRobot, routeRobot, goalOrientedRobot };
+export type { RobotFunction, Action };
